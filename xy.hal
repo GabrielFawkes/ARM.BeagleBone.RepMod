@@ -162,7 +162,7 @@ net tool-change-loop iocontrol.0.tool-change => iocontrol.0.tool-changed
 
 # Axis enable signal (active low)
 net emcmot.00.enable => bb_gpio.p9.out-14
-#setp bb_gpio.p9.out-14.invert 1 
+setp bb_gpio.p9.out-14.invert 1 
 
 # Machine power. THIS IS A TROUBLE MAKER
 net main_enable <= halui.machine.is-on => HWConfig.enable# => Pwm.enable
@@ -202,10 +202,10 @@ net limit-y-max <= bb_gpio.p9.in-16
 
 # Uncomment if you actually have limit switches setup
 # You probably want to setup homing in the INI file, as well
-#net limit-x-min => axis.0.home-sw-in
+net limit-x-min => axis.0.home-sw-in
 #net limit-x-min => axis.0.neg-lim-sw-in
 #net limit-x-max => axis.0.pos-lim-sw-in
-#net limit-y-max => axis.1.home-sw-in
+net limit-y-min => axis.1.home-sw-in
 #net limit-y-min => axis.1.neg-lim-sw-in
 #net limit-y-max => axis.1.pos-lim-sw-in
 #net limit-z-max => axis.2.home-sw-in
