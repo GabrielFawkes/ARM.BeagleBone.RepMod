@@ -71,8 +71,7 @@ addf wcomp.1			servo-thread
 # ######### #
 
 # enable stuff
-newsig emcmot.00.enable bit 
-newsig emcot.00.enable bit 
+newsig emcmot.00.enable bit  
 sets emcmot.00.enable FALSE 
 
 net emcmot.00.enable <= axis.0.amp-enable-out
@@ -100,7 +99,7 @@ setp hpg.stepgen.00.maxaccel        	[AXIS_0]STEPGEN_MAX_ACC
 
 setp hpg.stepgen.00.steppin		813
 setp hpg.stepgen.00.dirpin		826
-#setp hpg.stepgen.00.enable              915
+#setp hpg.stepgen.00.enable              814
 
 # ######### #
 # Y[1] Axis # 
@@ -108,7 +107,6 @@ setp hpg.stepgen.00.dirpin		826
 
 # enable stuff
 newsig emcmot.01.enable bit 
-newsig emcot.01.enable bit 
 sets emcmot.01.enable FALSE 
 
 net emcmot.01.enable <= axis.1.amp-enable-out
