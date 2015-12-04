@@ -170,12 +170,12 @@ net main_enable <= halui.machine.is-on => HWConfig.enable# => Pwm.enable
 
 # Microstepping and Mode 
 # value = 1/2^value. e.g. 5 means 1/32 step.
-setp HWConfig.stepper.0.microstepping 5
-setp HWConfig.stepper.1.microstepping 5
+setp HWConfig.stepper.0.microstepping 3
+setp HWConfig.stepper.1.microstepping 3
 #setp HWConfig.stepper.2.microstepping 5
 #setp HWConfig.stepper.3.microstepping 5
-setp HWConfig.stepper.0.current 2
-setp HWConfig.stepper.1.current 2
+setp HWConfig.stepper.0.current 1.7
+setp HWConfig.stepper.1.current 1.7
 #setp HWConfig.stepper.2.current 1
 #setp HWConfig.stepper.3.current 1.5
 
